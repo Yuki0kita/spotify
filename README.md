@@ -2,7 +2,6 @@
 
 音楽の繋がりを可視化する、データドリブンな音楽体験
 
-![Network Visualization](https://via.placeholder.com/800x400?text=Aimyon+Network+Visualization)
 
 ## 概要
 
