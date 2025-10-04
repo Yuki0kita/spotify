@@ -1,0 +1,114 @@
+# あいみょん リスニングネットワーク
+
+音楽の繋がりを可視化する、データドリブンな音楽体験
+
+![Network Visualization](https://via.placeholder.com/800x400?text=Aimyon+Network+Visualization)
+
+## 概要
+
+Spotify APIのデータに基づき、あいみょんと関連アーティストのネットワークを可視化したプロジェクト。D3.jsのforce-directed graphを使用して、アーティスト間の関連性を視覚的に表現しています。
+
+## 特徴
+
+- **インタラクティブなネットワーク図**: ノードのドラッグ、ズーム、パンが可能
+- **Spotifyスタイルのデザイン**: ダークテーマとSpotifyグリーンのアクセント
+- **リアルタイムハイライト**: ホバー時に関連アーティストを強調表示
+- **ジャンル別カラーリング**: 10種類のジャンルを色分けして可視化
+- **レスポンシブデザイン**: デスクトップ、タブレット対応
+
+## 技術スタック
+
+- **React 18**: UIフレームワーク
+- **D3.js v7**: データビジュアライゼーション
+- **Tailwind CSS**: スタイリング
+- **Vite**: ビルドツール
+
+## セットアップ
+
+### 必要要件
+
+- Node.js 16.x以上
+- npm または yarn
+
+### インストール
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/yourusername/aimyon-network.git
+cd aimyon-network
+
+# 依存関係をインストール
+npm install
+
+# 開発サーバーを起動
+npm run dev
+```
+
+ブラウザで `http://localhost:5173` を開いてください。
+
+### ビルド
+
+```bash
+npm run build
+```
+
+ビルドされたファイルは `dist` フォルダに出力されます。
+
+## 使い方
+
+### 基本操作
+
+- **ドラッグ**: ノードをドラッグして配置を調整
+- **ホバー**: アーティストにカーソルを合わせると関連性をハイライト
+- **ズーム**: マウスホイールで拡大縮小
+- **パン**: SVG背景をドラッグして視点を移動
+
+### データ構造
+
+現在はサンプルデータを使用していますが、以下の形式でデータを追加できます。
+
+```javascript
+const nodes = [
+  { id: "アーティスト名", group: "グループ", genre: "ジャンル" }
+];
+
+const links = [
+  { source: "アーティストA", target: "アーティストB", value: 10 }
+];
+```
+
+## プロジェクト構成
+
+```
+aimyon-network/
+├── src/
+│   ├── App.jsx          # メインコンポーネント
+│   ├── main.jsx         # エントリーポイント
+│   └── index.css        # グローバルスタイル
+├── public/              # 静的ファイル
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## 今後の拡張予定
+
+- [ ] Spotify API連携
+- [ ] アーティスト検索機能
+- [ ] プレイリスト生成機能
+- [ ] データのエクスポート機能
+- [ ] モバイル最適化
+
+## ライセンス
+
+MIT License
+
+## 作者
+
+あなたの名前
+
+## 謝辞
+
+- Spotify API
+- D3.js
+- React Community
